@@ -6,17 +6,22 @@ def shopping_cart():
         opening = input(f'Hello {name}! Would you like to "add"/"delete" an item or "view shopping cart"? Enter "quit" to complete your visit. ')
 
 
-        if opening.title() == "Add" or "Add" in opening.title():
+        if opening.title() == 'Add' or 'Add' in opening.title():
             add_items = input('What would you like to add? ')
             if add_items:
-                cost_items = input(f'Looks like you chose the {add_items}. Please enter the price: ')
-                if cost_items:
-                    
+                price_items = input(f'Looks like you chose to add {add_items}. Please enter the price: $ ')
+                if price_items:
+                    # add item to dictionary
+                    print(f'You have successfully added {add_items} to your shopping cart!')
 
-        elif opening.title() == "Delete" or "Delete" in opening.title():
+        elif opening.title() == 'Delete' or 'Delete' in opening.title():
             delete_items = input('What item would you like to delete? ')
+            if delete_items:
+                # delete item from dictionary
+                print(f'You have successfully removed {delete_items} to your shopping cart!')
 
-        elif opening.title() == 'View Shopping Cart' or "View" in opening.title():
+        elif opening.title() == 'View Shopping Cart' or 'View' in opening.title():
+            # show final shopping cart
             for key, value in responses.items():
                 print (f"{key.title()}'s address is {value}.")
 
