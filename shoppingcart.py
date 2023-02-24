@@ -1,4 +1,4 @@
-def addresses():
+def shopping_cart():
     responses = {}
     active = True
     while active:
@@ -10,7 +10,8 @@ def addresses():
             add_items = input('What would you like to add? ')
             if add_items:
                 cost_items = input(f'Looks like you chose the {add_items}. Please enter the price: ')
-                if cost_items
+                if cost_items:
+                    
 
         elif opening.title() == "Delete" or "Delete" in opening.title():
             delete_items = input('What item would you like to delete? ')
@@ -26,4 +27,4 @@ def addresses():
                 print (f"{key.title()}'s address is {value}.")
 
 
-addresses()
+shopping_cart()
